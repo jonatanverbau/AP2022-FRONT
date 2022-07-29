@@ -1,0 +1,23 @@
+.row{
+    background-color: #FFC24B;
+    padding: 20px;
+}
+.contenedor{
+    width: auto;
+}
+.parte1{
+    text-align: left;
+    display: inline-block;
+}
+.parte2{
+    text-align: justify;
+    display: inline-block;
+}
+.parte3{
+    text-align: justify;
+    display: inline-block;
+}
+.imagen-proyecto{
+    box-shadow: 10px 10px 5px #000;
+    display: inline-block;
+}
