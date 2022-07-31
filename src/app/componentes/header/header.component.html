@@ -11,7 +11,8 @@
             <a href=""><img src="../../../assets/Whatsapp.png" alt="Whatsapp" id="icon-whatsapp"class="img-fluid iconosredes"></a>
             <a href=""><img src="../../../assets/Github.png" alt="Github" id="icon-github" class="img-fluid iconosredes"></a>
             <a href=""><img src="../../../assets/Gmail.png" alt="Gmail" id="icon-gmail"class="img-fluid iconosredes"></a>
-            <button type="button" class="btn btn-outline-dark" (click)="login()" data-mdb-toggle="modal" data-mdb-target="#pruebaModal">Acceder</button>
+            <button type="button" class="btn btn-outline-dark" (click)="login()" *ngIf="!isLoged">Acceder</button>
+            <button type="button" class="btn btn-outline-dark" (click)="onLogOut()"*ngIf="isLoged">Salir</button>
         </div>
     </div>
 </div>
