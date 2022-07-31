@@ -2,7 +2,6 @@ import { HttpEvent, HttpHandler, HttpRequest, HTTP_INTERCEPTORS } from '@angular
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TokenService } from './token.service';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -23,4 +22,5 @@ export class InterceptorService {
 export const interceptorProvider = [{
   provide: HTTP_INTERCEPTORS,
   useClass: InterceptorService,
-  multi: true }];
+  multi: true 
+}];

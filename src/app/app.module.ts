@@ -16,6 +16,16 @@ import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './servicios/interceptor.service';
+import { EditlaboralComponent } from './componentes/laboral/editlaboral.component';
+import { NewlaboralComponent } from './componentes/laboral/newlaboral.component';
+import { NeweducacionComponent } from './componentes/educacion/neweducacion.component';
+import { EditeducacionComponent } from './componentes/educacion/editeducacion.component';
+import { NewproyectosComponent } from './componentes/proyectos/newproyectos.component';
+import { EditproyectosComponent } from './componentes/proyectos/editproyectos.component';
+import { EditpersonaComponent } from './componentes/editpersona/editpersona.component';
+import { NewskillComponent } from './componentes/skills/newskill.component';
+import { EditskillComponent } from './componentes/skills/editskill.component';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +39,15 @@ import { interceptorProvider } from './servicios/interceptor.service';
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    EditlaboralComponent,
+    NewlaboralComponent,
+    NeweducacionComponent,
+    EditeducacionComponent,
+    NewproyectosComponent,
+    EditproyectosComponent,
+    EditpersonaComponent,
+    NewskillComponent,
+    EditskillComponent
   ],
   imports: [
     BrowserModule,

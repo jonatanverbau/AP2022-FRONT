@@ -1,0 +1,123 @@
+<section class="background-radial-gradient overflow-hidden" id="section" *ngIf="per">
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+      <div class="row gx-lg-5 align-items-center mb-5">
+        <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+          <h1
+            class="my-5 display-5 fw-bold ls-tight"
+            style="color: hsl(218, 81%, 95%)"
+          >
+            Actualizar <br />
+            <span style="color: hsl(218, 81%, 75%)"
+              >Datos Personales</span
+            >
+          </h1>
+          <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+            Completa los datos
+            <br />Todos son obligatorios
+            <br />En imagen se debe colocar un URL, se recomienda utilizar ImgBB.
+            <br /><a href="https://imgbb.com">https://imgbb.com</a>
+
+          </p>
+        </div>
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+          <div
+            id="radius-shape-1"
+            class="position-absolute rounded-circle shadow-5-strong"
+          ></div>
+          <div
+            id="radius-shape-2"
+            class="position-absolute shadow-5-strong"
+          ></div>
+          <div class="card bg-glass">
+            <div class="card-body px-4 py-5 px-md-5">
+              <form #f="ngForm" (ngSubmit)="onUpdatePersona()" novalidate>
+                <!-- Exp img -->
+                <div class="form-outline mb-4">
+                  <input 
+                    type = "string"
+                    id = "nombre"
+                    name = "nombre"
+                    class="form-control"
+                    [(ngModel)] = "per.nombre"
+                    required
+                  />
+                  <label class="form-label" for="nombre">Nombre</label>
+                </div>
+                <!-- business  -->
+                <div class="form-outline mb-4">
+                    <input
+                      type = "string"
+                      id = "apellido"
+                      name = "apellido"
+                      class="form-control"
+                      [(ngModel)] = "per.apellido"
+                      required
+                    />
+                    <label class="form-label" for="apellido">Apellido</label>
+                  </div>
+                <!-- business  -->
+                <div class="form-outline mb-4">
+                  <input
+                    type = "string"
+                    id = "descripcion"
+                    name = "descripcion"
+                    class="form-control"
+                    [(ngModel)] = "per.descripcion"
+                    required
+                  />
+                  <label class="form-label" for="descripcion">Presentación</label>
+                </div>
+                <!-- imágen de perfil  -->
+                  <div class="form-outline mb-4">
+                    <input 
+                      type = "string"
+                      id = "img"
+                      name = "img"
+                      class="form-control"
+                      [(ngModel)] = "per.img"
+                      required
+                    />
+                    <div class="form-outline mb-4">
+                        <input 
+                          type = "string"
+                          id = "titulo"
+                          name = "titulo"
+                          class="form-control"
+                          [(ngModel)] = "per.titulo"
+                          required
+                        />
+                        <label class="form-label" for="titulo">Profesión</label>
+                    </div>
+                    <label class="form-label" for="img">Imagen de Perfil</label>
+                  </div>
+                      <!-- mail  -->
+                    <div class="form-outline mb-4">
+                        <input 
+                          type = "string"
+                          id = "correo"
+                          name = "correo"
+                          class="form-control"
+                          [(ngModel)] = "per.correo"
+                          required
+                        />
+                        <label class="form-label" for="correo">Correo Electronico</label>
+                      </div>
+                <!-- Submit button -->
+                <div class="container">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-block mb-4"
+                    id="loginButton"
+                    >Actualizar</button>
+                  <button (click)="volver()"
+                    class="btn btn-primary btn-block mb-4"
+                    id="volverButton"
+                    >Volver</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
