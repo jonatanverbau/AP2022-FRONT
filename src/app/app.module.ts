@@ -25,6 +25,7 @@ import { EditproyectosComponent } from './componentes/proyectos/editproyectos.co
 import { EditpersonaComponent } from './componentes/editpersona/editpersona.component';
 import { NewskillComponent } from './componentes/skills/newskill.component';
 import { EditskillComponent } from './componentes/skills/editskill.component';
+import { BannerComponent } from './componentes/banner/banner.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { EditskillComponent } from './componentes/skills/editskill.component';
     EditproyectosComponent,
     EditpersonaComponent,
     NewskillComponent,
-    EditskillComponent
+    EditskillComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,

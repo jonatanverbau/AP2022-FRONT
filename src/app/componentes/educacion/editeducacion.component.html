@@ -1,19 +1,41 @@
-<div class="container" *ngIf="educacion">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreEdu">Nombre de la institucion</label>
-                    <input type="text" class="form-control" id="nombreEdu" name="nombreEdu" [(ngModel)]="educacion.nombreEdu" required>
-                </div>
-                <div class="form-group">
-                    <label for="descEdu">Descripcion de sus estudios</label>
-                    <input type="text" class="form-control" id="descEdu" name="descEdu" [(ngModel)]="educacion.descEdu" required>
-                </div>
-                <button class="btn btn-primary">
-                    Editar educacion
-                </button>
-            </form>
-        </div>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+  <div class="form-group row">
+    <label for="nombreEdu" class="col-4 col-form-label">Título de curso o carrera</label> 
+    <div class="col-8">
+      <input id="nombreEdu" name="nombreEdu" type="text" required="required" class="form-control" [(ngModel)]="educacion.nombreEdu">
     </div>
-</div>
+  </div>
+  <div class="form-group row">
+    <label for="lugarEdu" class="col-4 col-form-label">Institución que certifica</label> 
+    <div class="col-8">
+      <input id="lugarEdu" name="lugarEdu" type="text" required="required" class="form-control"[(ngModel)]="educacion.lugarEdu">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="imgEdu" class="col-4 col-form-label">Link de imagen relacionada</label> 
+    <div class="col-8">
+      <input id="imgEdu" name="imgEdu" type="text" class="form-control" [(ngModel)]="educacion.img">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="descEdu" class="col-4 col-form-label">Descripción</label> 
+    <div class="col-8">
+      <textarea id="descEdu" name="descEdu" cols="40" rows="5" required="required" class="form-control"[(ngModel)]="educacion.descEdu"></textarea>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="anioEdu" class="col-4 col-form-label">Año de egreso</label> 
+    <div class="col-8">
+      <input id="anioEdu" name="anioEdu" type="text" required="required" class="form-control" aria-describedby="anioEduHelpBlock"[(ngModel)]="educacion.anioEdu" > 
+      <span id="anioEduHelpBlock" class="form-text text-muted">o último año cursado</span>
+    </div>
+  </div> 
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <button name="submit" type="submit" class="btn btn-primary">Actualizar</button>
+    </div>
+  </div>
+</form>

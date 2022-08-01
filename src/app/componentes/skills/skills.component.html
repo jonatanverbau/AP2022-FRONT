@@ -1,4 +1,36 @@
 <div class="row">
+    <h1>Hard&Soft Skills</h1>
+    <button class="icon-btn btn-primary" routerLink="/nuevaskill" *ngIf="isLoged">
+        <div class="add-icon"></div>
+        <div class="btn-txt">Agregar Habilidad</div>
+    </button>
+    <div>
+        <div class="btn btn-outline-primary container" *ngFor="let skill of skill">
+            <h2>{{skill.nombreSkill}}</h2>
+            <circle-progress
+                    [percent]="skill.nivelSkill"
+                    [radius]="100"
+                    [imageSrc]="skill.img"
+                    [showImage]="true"
+                    [imageHeight]="100"
+                    [imageWidth]="100"
+                    [backgroundColor]="'#014ba0'"
+                    [outerStrokeWidth]="15"
+                    [innerStrokeWidth]="5"
+                    [outerStrokeColor]="'#eaeaea'"
+                    [innerStrokeColor]="'#ffffff'"
+                    [animation]="true"
+                    [animationDuration]="5000"
+            ></circle-progress>
+            <div *ngIf="isLoged">
+                <button type="button" class="btn btn-primary" routerLink="/editskill/{{skill.id}}"><i class="bi bi-pencil-square">Editar</i></button>
+                <button type="button" class="btn btn-danger"><i class="bi bi-trash" (click)="deleteSkill(skill.id)">Eliminar</i></button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- <div class="row">
     <div id="title">
     <h1>Hard&Soft Skills</h1>
     <button class="icon-btn add-btn" routerLink="/nuevaskill" *ngIf="isLoged">
@@ -29,4 +61,4 @@
             <button type="button" class="btn btn-danger"><i class="bi bi-trash" (click)="deleteSkill(skill.id)">Eliminar</i></button>
         </div>
     </div>
-</div>
+</div> -->

@@ -1,19 +1,35 @@
-<div class="container" *ngIf="proyecto">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreProy">Nombre de la institucion</label>
-                    <input type="text" class="form-control" id="nombreProy" name="nombreProy" [(ngModel)]="proyecto.nombreProy" required>
-                </div>
-                <div class="form-group">
-                    <label for="descProy">Descripcion de sus estudios</label>
-                    <input type="text" class="form-control" id="descProy" name="descProy" [(ngModel)]="proyecto.descProy" required>
-                </div>
-                <button class="btn btn-primary">
-                    Editar proyecto
-                </button>
-            </form>
-        </div>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+  <div class="form-group row">
+    <label for="nombreProy" class="col-4 col-form-label">Nombre del Proyecto</label> 
+    <div class="col-8">
+      <input id="nombreProy" name="nombreProy" type="text" required="required" class="form-control" [(ngModel)]="proyecto.nombreProy">
     </div>
-</div>
+  </div>
+  <div class="form-group row">
+    <label for="imgProy" class="col-4 col-form-label">Link de imagen relacionada</label> 
+    <div class="col-8">
+      <input id="imgProy" name="imgProy" type="text" class="form-control" [(ngModel)]="proyecto.imgProy">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="descProy" class="col-4 col-form-label">Descripción del Proyecto</label> 
+    <div class="col-8">
+      <textarea id="descProy" name="descProy" cols="40" rows="5" required="required" class="form-control"[(ngModel)]="proyecto.descProy"></textarea>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="urlProy" class="col-4 col-form-label">Link del Proyecto</label> 
+    <div class="col-8">
+      <input id="urlProy" name="urlProy" type="text" aria-describedby="urlProyHelpBlock" required="required" class="form-control" [(ngModel)]="proyecto.urlProy"> 
+      <span id="urlProyHelpBlock" class="form-text text-muted">o último año cursado</span>
+    </div>
+  </div> 
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <button name="submit" type="submit" class="btn btn-primary">Actualizar</button>
+    </div>
+  </div>
+</form>
