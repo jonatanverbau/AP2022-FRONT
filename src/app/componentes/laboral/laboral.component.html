@@ -6,9 +6,9 @@
       <ul *ngFor="let Experiencia of expe">
           <li>
               <h2>{{Experiencia.nombreExp}}</h2>
-              <button class="btn btn-dark" routerLink="/editexp/{{Experiencia.id}}">
+              <button class="btn btn-dark" routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged">
               <i class="bi bi-pencil-fill"></i> EDITAR</button>
-              <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+              <button class="btn btn-danger" (click)="delete(Experiencia.id)" *ngIf="isLogged">
               <i class="bi bi-trash-fill"></i> BORRAR</button><br>
               <br>
               <h2>{{Experiencia.lugarExp}}</h2>

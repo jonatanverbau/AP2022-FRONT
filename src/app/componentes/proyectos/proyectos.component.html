@@ -3,9 +3,9 @@
   <div class="contenedor" *ngFor="let Proyecto of proyecto">
       <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 parte1">
           <h2>{{Proyecto.nombreProy}}</h2><br>
-          <p class="parte2">{{Proyecto.descProy}}<button class="btn btn-dark" routerLink="/editproyecto/{{Proyecto.id}}">
+          <p class="parte2">{{Proyecto.descProy}}<button class="btn btn-dark" routerLink="/editproyecto/{{Proyecto.id}}" *ngIf="isLogged">
             <i class="bi bi-pencil-fill"></i> EDITAR</button>
-            <button class="btn btn-danger" (click)="delete(Proyecto.id)">
+            <button class="btn btn-danger" (click)="delete(Proyecto.id)" *ngIf="isLogged">
             <i class="bi bi-trash-fill"></i> BORRAR</button></p>
       </div>
       <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 offset-lg-1 offset-md-1 offset-sm-1 parte3">

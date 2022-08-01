@@ -6,9 +6,9 @@
       <ul *ngFor="let Educacion of educacion">
           <li>
               <h2>{{Educacion.nombreEdu}}</h2>
-              <button class="btn btn-dark" routerLink="/editedu/{{Educacion.id}}">
+              <button class="btn btn-dark" routerLink="/editedu/{{Educacion.id}}"*ngIf="isLogged">
               <i class="bi bi-pencil-fill"></i> EDITAR</button>
-              <button class="btn btn-danger" (click)="delete(Educacion.id)">
+              <button class="btn btn-danger" (click)="delete(Educacion.id)"*ngIf="isLogged">
               <i class="bi bi-trash-fill"></i> BORRAR</button><br>
               <h2>{{Educacion.anioEdu}}</h2>
               <br>
