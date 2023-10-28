@@ -12,22 +12,22 @@ export class PersonaService {
   constructor(private http: HttpClient) { }
 
   public detailPersona(id: number): Observable<persona> {
-    return this.http.get<persona>(this.URL+ 'detail/1');
+    return this.http.get<persona>(this.URL+ 'detalle/7');
   }
   public listPersona(): Observable<persona> {
-    return this.http.get<persona>(this.URL+ 'lista');
+    return this.http.get<persona>(this.URL+ 'listar');
   }
 
   public savePersona(per: persona): Observable<any> {
-    return this.http.post<any>(this.URL+ 'create', per);
+    return this.http.post<any>(this.URL+ 'guardar', per);
   }
 
   public updatePersona(id: number, exp: persona): Observable<any> {
-    return this.http.put<any>(this.URL+ `update/${id}`, exp);
+    return this.http.put<any>(this.URL+ `edit/${id}`, exp);
   }
 
   public deletePersona(id: number): Observable<any> {
-    return this.http.delete<any>(this.URL+ `delete/${id}`);
+    return this.http.delete<any>(this.URL+ `nisman/${id}`);
   }
 
 }
